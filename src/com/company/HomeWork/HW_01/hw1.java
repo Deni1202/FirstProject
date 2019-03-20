@@ -1,4 +1,4 @@
-package com.company.HomeWork;
+package com.company.HomeWork.HW_01;
 
 
 public class hw1 {
