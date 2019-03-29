@@ -7,7 +7,8 @@ package com.company.HomeWork.HW_03;
  */
 public class com {
     public static void main(String[] args){
-    compare(3);
+
+        compare(3);
     }
     public static void compare(int a){
         if(a<5){
