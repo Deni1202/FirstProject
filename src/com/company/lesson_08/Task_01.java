@@ -12,9 +12,11 @@ package com.company.lesson_08;
 …
 */
 
+import java.sql.SQLOutput;
+/*
 public class Task_01 {
     public static void main(String[] args){
-        Human grandmother1 = new Human("Olya",true, 50,null,null);
+        Human grandmother1 = new Human("Olya",true, 50,"null","null");
         Human grandfather1 = new Human("Irina",true,45,null,null);
 
         Human grandmother2 = new Human("Igor",false,60,null,null);
@@ -68,7 +70,7 @@ class Human {
     }
 
     public void setSex(boolean sex) {
-        this.sex = sex;
+         this.sex = sex;
     }
 
     public int getAge() {
@@ -96,6 +98,13 @@ class Human {
 
 
     public String toString() {
-        return String.format("Имя: %s, Пол: %s,Возраст: %d, Мама: %s, Папа: %s",name,sex,age,mother,father);
+        String res = "";
+        res+= "Name: " + getName() +" ";
+        res+="Age: " + getAge();
+        res+="Sex: "+ getSex();
+        res+= "Mother: " + getMother();
+        res+="Father: " + getFather();
+        return  res;
     }
 }
+*/
