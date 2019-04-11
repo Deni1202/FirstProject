@@ -21,9 +21,11 @@ public class Task_1003 {
             str[i] = reader.readLine();
         }
         for(int a = 0;a<str.length;a++){
-            int b = str[a].length();
-            System.out.println(b);
+           numb[a] = str[a].length();
+            System.out.println(numb[a]);
         }
+
+
     }
 }
 
