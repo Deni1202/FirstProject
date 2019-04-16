@@ -13,21 +13,21 @@ package com.company.lesson_08;
 */
 
 import java.sql.SQLOutput;
-/*
+
 public class Task_01 {
     public static void main(String[] args){
-        Human grandmother1 = new Human("Olya",true, 50,"null","null");
-        Human grandfather1 = new Human("Irina",true,45,null,null);
+        Human grandmother1 = new Human("Olya",false, 50,null,null);
+        Human grandfather1 = new Human("Ivan",true,45,null,null);
 
-        Human grandmother2 = new Human("Igor",false,60,null,null);
-        Human grandfather2 = new Human("Oleg",false,55,null,null);
+        Human grandmother2 = new Human("Luda",false,60,null,null);
+        Human grandfather2 = new Human("Oleg",true,55,null,null);
 
-        Human mother = new Human("Aleksandr", false,35,grandmother1,grandfather1);
-        Human father = new Human("Ala", true, 34,grandmother2,grandfather2);
+        Human mother = new Human("Ala", false,35,grandmother1.getMother(),grandfather1.getFather());
+        Human father = new Human("Aleksandr", true, 34,grandmother2,grandfather2);
 
         Human children1 = new Human("Stepa",false, 6,mother, father);
         Human children2 = new Human("Pasha",false, 9,mother, father);
-        Human children3 = new Human("Pasha",false, 9,mother, father);
+        Human children3 = new Human("Dasha",false, 9,mother, father);
         System.out.println(grandmother1);
         System.out.println(grandfather1);
         System.out.println(grandmother2);
@@ -104,7 +104,8 @@ class Human {
         res+="Sex: "+ getSex();
         res+= "Mother: " + getMother();
         res+="Father: " + getFather();
+
+
         return  res;
     }
 }
-*/
