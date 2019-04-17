@@ -15,11 +15,11 @@ import java.io.InputStreamReader;
 public class Task_1102 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] numbs = new int[10];
-        int[] numb1 = new int[numbs[5]];
-        int[] numb2 = new int[5];
+        double[] numbs = new double[10];
+        double[] numb1 = new double[5];
+        double[] numb2 = new double[5];
         for (int i = 0; i < numbs.length; i++) {
-            numbs[i] = Integer.parseInt(reader.readLine());
+            numbs[i] = Double.parseDouble(reader.readLine());
         }
         for (int a = 0; a < numb1.length; a++) {
             numb1[a] = numbs[a];
