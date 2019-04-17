@@ -26,9 +26,7 @@ public class Task_1103 {
     public static void arrayDivision(int[] arrayBig){
         int[] numbs1 = new int[arrayBig.length/2];
         int[] numbs2 = new int[arrayBig.length - numbs1.length];
-        for(int a = 0; a<numbs1.length;a++){
-            numbs1[a] = arrayBig[a];
-        }
+
         for(int i = 0;i<numbs1.length;i++){
             numbs1[i] = arrayBig[i];
         }
