@@ -15,19 +15,18 @@ import java.io.InputStreamReader;
 public class Task_1102 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int q = 20;
-        int[] numbs = new int[q];
-        int[] numb1 = new int[numbs[q/2]];
-        int[] numb2 = new int[q/2];
+        int[] numbs = new int[10];
+        int[] numb1 = new int[numbs[5]];
+        int[] numb2 = new int[5];
         for (int i = 0; i < numbs.length; i++) {
             numbs[i] = Integer.parseInt(reader.readLine());
         }
         for (int a = 0; a < numb1.length; a++) {
             numb1[a] = numbs[a];
         }
-        for(int b =0;b<numbs.length;b++){
-            numb2[b] = numbs[b+(numb2.length-1)];
-            System.out.println(numb2[b]);
+        for(int a =0;a<numb2.length;a++){
+            numb2[a] = numbs[a+numb1.length];
+            System.out.println(numb2[a]);
         }
         }
         }
