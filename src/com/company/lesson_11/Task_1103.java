@@ -30,10 +30,13 @@ public class Task_1103 {
         for(int a = 0; a<numbs1.length;a++){
             numbs1[a] = arrayBig[a];
         }
-        for(int b = 0;b<arrayBig.length;b++){
-            numbs2[b] = arrayBig[b+numbs2.length-1];
-            System.out.println(numbs2[b]);
+        for(int i = 0;i<numbs1.length;i++){
+            numbs1[i] = arrayBig[i];
+        }
+        for(int i = 0;i<numbs2.length;i++){
+            numbs2[i] = arrayBig[i + numbs1.length];
+            System.out.println(numbs2[i]);
+        }
         }
 
     }
-}
