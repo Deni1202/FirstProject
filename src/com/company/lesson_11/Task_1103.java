@@ -12,8 +12,8 @@ import java.io.InputStreamReader;
 5. Вывести второй маленький массив на экран, каждое значение выводить с новой строки.
 */
 public class Task_1103 {
-    public static void main(String[] args){
-    arrayInitialisation(arrayDivision());
+    public static void main(String[] args) throws IOException {
+    arrayDivision(arrayInitialisation());
     }
     public static int[] arrayInitialisation() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -30,8 +30,8 @@ public class Task_1103 {
         for(int a = 0; a<numbs1.length;a++){
             numbs1[a] = arrayBig[a];
         }
-        for(int b = numbs2.length;b<arrayBig.length;b++){
-            numbs2[b] = arrayBig[b];
+        for(int b = 0;b<arrayBig.length;b++){
+            numbs2[b] = arrayBig[b+numbs2.length-1];
             System.out.println(numbs2[b]);
         }
 
