@@ -100,22 +100,22 @@ class Human {
 
     public String toString() {
         String res = "";
-        res += "Name: " + getName() + " ";
-        res += "Age: " + getAge() + " ";
+        res += "Name: " + getName() + ", ";
+        res += "Age: " + getAge() + ", ";
         if (sex = true) {
-            res += "Sex: " + "female" + " ";
+            res += "Sex: " + "female" + ", ";
         } else {
-            res += "Sex: " + "male" + " ";
+            res += "Sex: " + "male" + ", ";
         }
         if (mother == null) {
             System.out.println(" ");
         } else{
-            res += "Mother: " + getMother().getName() + " ";
+            res += "Mother: " + getMother().getName() + ", ";
         }
         if(father == null){
             System.out.println(" ");
         }else {
-            res += "Father: " + getFather().getName() + " ";
+            res += "Father: " + getFather().getName() + ", ";
         }
 
         return  res;
