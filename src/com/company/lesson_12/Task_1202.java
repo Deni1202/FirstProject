@@ -23,8 +23,8 @@ public class Task_1202 {
             for (int b = 0; b < arr.length - 1; b++) {
                 if (arr[b] < arr[b + 1]) {
                     int d = arr[b];
-                    arr[b] = d;
-                    b++;
+                    arr[b] = arr[b+1];
+                    arr[b+1] = d;
 
 
                 }
