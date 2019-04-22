@@ -22,12 +22,13 @@ public class Task_01 {
         Human grandmother2 = new Human("Luda",false,60,null,null);
         Human grandfather2 = new Human("Oleg",true,55,null,null);
 
-        Human mother = new Human("Ala", false,35,grandmother1.getMother(),grandfather1.getFather());
-        Human father = new Human("Aleksandr", true, 34,grandmother2,grandfather2);
+        Human mother = new Human("Ala", false,35,grandfather1,grandmother1);
+        Human father = new Human("Aleksandr", true, 34,grandfather2,grandmother2);
 
         Human children1 = new Human("Stepa",false, 6,mother, father);
         Human children2 = new Human("Pasha",false, 9,mother, father);
-        Human children3 = new Human("Dasha",false, 9,mother, father);
+        Human children3 = new Human("Dasha",true, 9,mother, father);
+
         System.out.println(grandmother1);
         System.out.println(grandfather1);
         System.out.println(grandmother2);
@@ -99,12 +100,23 @@ class Human {
 
     public String toString() {
         String res = "";
-        res+= "Name: " + getName() +" ";
-        res+="Age: " + getAge();
-        res+="Sex: "+ getSex();
-        res+= "Mother: " + getMother();
-        res+="Father: " + getFather();
-
+        res += "Name: " + getName() + " ";
+        res += "Age: " + getAge() + " ";
+        if (sex = true) {
+            res += "Sex: " + "female" + " ";
+        } else {
+            res += "Sex: " + "male" + " ";
+        }
+        if (mother == null) {
+            System.out.println(" ");
+        } else{
+            res += "Mother: " + getMother().getName() + " ";
+        }
+        if(father == null){
+            System.out.println(" ");
+        }else {
+            res += "Father: " + getFather().getName() + " ";
+        }
 
         return  res;
     }
