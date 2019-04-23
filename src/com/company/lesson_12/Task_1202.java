@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 public class Task_1202 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] a = new int[10];
+        int[] a = new int[5];
 
         for (int i = 0; i < a.length; i++) {
             a[i] = Integer.parseInt(reader.readLine());
