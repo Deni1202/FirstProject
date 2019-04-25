@@ -10,7 +10,7 @@ package com.company.lesson_13;
  */
 public class Task_1301 {
     public static void main(String[] args) {
-        int[] arr = {5,4,7};
+        int[] arr = {};
         System.out.println(retArr(arrayFinal(arr)));
     }
 
