@@ -12,7 +12,7 @@ public class Task_1401 {
         list.add(7);                            // list[1] = 7;
         list.add(0, 20);           // [0] = 20; [1] = 5; [2] = 7
         list.set(2, 10);                         // [2] = 10;
-
+        list.remove(1);
 
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
