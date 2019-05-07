@@ -27,18 +27,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Task_1602 {
-    public static void main(String[] args){
-    List<String> allWords = new ArrayList<>();
-    }
-    private static List<String> listEnter(List<String>allWords) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) throws IOException {
+    System.out.println(fix(listEnter());
 
+    }
+    private static List<String> listEnter() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        List<String> allWords = new ArrayList<>();
         while(true){
             allWords.add(0, reader.readLine());
-            if(allWords.size()>10){
+            if(allWords.size()>5){
                 break;
             }
         }
         return allWords;
+    }
+    private static void fix(List<String>allWords){
+        for(int i = 0; i<allWords.size();i++){
+            if(allWords.get(i).contains("р")){
+                    allWords.remove(allWords.get(i));
+        }if(allWords.get(i).contains("л")){
+            allWords.add(0,allWords.get(i));
+            allWords.add(0,allWords.get(i));
+        }if(allWords.get(i).contains("л") && allWords.get(i).contains("р")){
+                allWords.add(0,allWords.get(i));
+        }else{
+
+            }
+
+        }
     }
 }
