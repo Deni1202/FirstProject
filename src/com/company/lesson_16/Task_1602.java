@@ -28,7 +28,7 @@ import java.util.List;
 
 public class Task_1602 {
     public static void main(String[] args) throws IOException {
-    System.out.println(fix(listEnter());
+    System.out.println(fix(listEnter()));
 
     }
     private static List<String> listEnter() throws IOException {
@@ -42,19 +42,19 @@ public class Task_1602 {
         }
         return allWords;
     }
-    private static void fix(List<String>allWords){
+    private static List<String> fix(List<String>allWords){
         for(int i = 0; i<allWords.size();i++){
             if(allWords.get(i).contains("р")){
                     allWords.remove(allWords.get(i));
         }if(allWords.get(i).contains("л")){
-            allWords.add(0,allWords.get(i));
-            allWords.add(0,allWords.get(i));
+            allWords.add(allWords.size(),allWords.get(i));
+            allWords.add(allWords.size(),allWords.get(i));
         }if(allWords.get(i).contains("л") && allWords.get(i).contains("р")){
                 allWords.add(0,allWords.get(i));
-        }else{
 
             }
 
         }
+        return allWords;
     }
 }
