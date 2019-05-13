@@ -20,7 +20,6 @@ package com.company.lesson_16;
 */
 
 import java.io.BufferedReader;
-import java.io.Console;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -28,33 +27,39 @@ import java.util.List;
 
 public class Task_1602 {
     public static void main(String[] args) throws IOException {
-    System.out.println(fix(listEnter()));
+        System.out.println(fix(listEnter()));
 
     }
+
     private static List<String> listEnter() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<String> allWords = new ArrayList<>();
-        while(true){
-            allWords.add(0, reader.readLine());
-            if(allWords.size()>5){
+        while (true) {
+            if (allWords.size() >= 5) {
                 break;
             }
+            allWords.add(0, reader.readLine());
         }
         return allWords;
     }
-    private static List<String> fix(List<String>allWords){
-        for(int i = 0; i<allWords.size();i++){
-            if(allWords.get(i).contains("р")){
-                    allWords.remove(allWords.get(i));
-        }if(allWords.get(i).contains("л")){
-            allWords.add(allWords.size(),allWords.get(i));
-            allWords.add(allWords.size(),allWords.get(i));
-        }if(allWords.get(i).contains("л") && allWords.get(i).contains("р")){
-                allWords.add(0,allWords.get(i));
+
+   private static List<String>fix(List<String> allWords) {
+        List<String>stringList = new ArrayList<>();
+        for (int i = 0; i < allWords.size()-1; i++) {
+            if (allWords.get(i).contains("л") && allWords.get(i).contains("р")) {
+                stringList.add(0, allWords.get(i));
+            }
+            if (allWords.get(i).contains("р")) {
+                allWords.remove(allWords.get(i));
+            }
+            if (allWords.get(i).contains("л")) {
+                stringList.add(allWords.get(i));
+                stringList.add(allWords.get(i));
+
 
             }
 
         }
-        return allWords;
+        return stringList;
     }
 }
