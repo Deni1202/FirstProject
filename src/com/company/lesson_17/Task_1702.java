@@ -24,11 +24,11 @@ public class Task_1702 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<Cat>allCat = new ArrayList<>();
         while(true) {
-            int age = Integer.parseInt(reader.readLine());
             String name = reader.readLine();
             if (name.isEmpty()) {
                 break;
             }
+            int age = Integer.parseInt(reader.readLine());
             int weight = Integer.parseInt(reader.readLine());
             int tail = Integer.parseInt(reader.readLine());
 
@@ -78,10 +78,10 @@ class Cat{
 
     public String toString() {
     String par = "";
-    par+="age = "+ age;
-    par+="Cat name is " + name;
-    par+="tail = " + tail;
-    par+="weight = " + weight;
+    par+="age = "+ age+ " ";
+    par+="Cat name is " + name + " ";
+    par+="tail = " + tail + " ";
+    par+="weight = " + weight + " ";
 
     return par;
     }
