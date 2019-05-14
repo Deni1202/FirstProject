@@ -23,14 +23,19 @@ public class Task_1702 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<Cat>allCat = new ArrayList<>();
-        int age = Integer.parseInt(reader.readLine());
+        while(true) {
+            int age = Integer.parseInt(reader.readLine());
             String name = reader.readLine();
-            if(name.isEmpty()){
+            if (name.isEmpty()) {
                 break;
             }
             int weight = Integer.parseInt(reader.readLine());
             int tail = Integer.parseInt(reader.readLine());
-        Cat cat1 = new Cat (age, name, weight,tail);
+
+            Cat cat = new Cat(age, name, weight, tail);
+            allCat.add(cat);
+        }
+        System.out.println(allCat);
     }
 }
 class Cat{
@@ -71,7 +76,7 @@ class Cat{
     }
 
 
-    private String toString() {
+    public String toString() {
     String par = "";
     par+="Cat name is " + name;
     par+="age = "+ age;
