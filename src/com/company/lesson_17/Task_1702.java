@@ -39,10 +39,10 @@ public class Task_1702 {
     }
 }
 class Cat{
-    int age;
-    String name;
-    int weight;
-    int tail;
+    private int age;
+    private String name;
+    private int weight;
+    private int tail;
 
     public Cat(int age,String name,int weight, int tail){
         this.age = age;
@@ -78,8 +78,8 @@ class Cat{
 
     public String toString() {
     String par = "";
-    par+="Cat name is " + name;
     par+="age = "+ age;
+    par+="Cat name is " + name;
     par+="tail = " + tail;
     par+="weight = " + weight;
 
