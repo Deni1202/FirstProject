@@ -19,31 +19,34 @@ import java.util.List;
 Я Я Я
 */
 public class Task_1701 {
-    public static void main(String[] args){
-    System.out.println(allString(stringOut()));
+    public static void main(String[] args) throws IOException {
+    stringOut(allString());
     }
     private static List<String>allString() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<String>allString=new ArrayList<>();
-        String a = "";
         while(true){
-            if(allString.equals(a)){
+            allString.add(0,reader.readLine());
+            if(allString.equals("")){
                 break;
             }
-            allString.add(0,reader.readLine());
         }
         return allString;
     }
     private static void stringOut(List<String>allString){
-        List<String>newList = new ArrayList<>();
+        int b = 0;
         for(int i = 0; i<allString.size();i++) {
             if (allString.size() % 2 == 0) {
-              for(int a = 0;a<=1;a++){
-                  newList.add(0,allString.get(i));
+                if(b<=1){
+              System.out.println(allString.get(i));
+              b++;
               }
             } if (allString.size() % 2 != 0) {
                 for(int a = 0;a<=2;a++){
-                    newList.add(0,allString.get(i));
+                    if(b<=2){
+                        System.out.println(allString.get(i));
+                        b++;
+                    }
                 }
 
             }
