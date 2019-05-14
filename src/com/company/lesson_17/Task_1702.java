@@ -16,15 +16,21 @@ Cat name is Murka, age is 8, weight is 7, tail = 20
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Task_1702 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        List<Cat>allCat = new ArrayList<>();
         int age = Integer.parseInt(reader.readLine());
-        String name = reader.readLine();
-        int weight = Integer.parseInt(reader.readLine());
-        int tail = Integer.parseInt(reader.readLine());
-    Cat cat1 = new Cat (age,name,weight,tail);
+            String name = reader.readLine();
+            if(name.isEmpty()){
+                break;
+            }
+            int weight = Integer.parseInt(reader.readLine());
+            int tail = Integer.parseInt(reader.readLine());
+        Cat cat1 = new Cat (age, name, weight,tail);
     }
 }
 class Cat{
@@ -39,39 +45,40 @@ class Cat{
         this.weight = weight;
         this.tail = tail;
     }
-    public int getAge(){
+    private int getAge(){
         return age;
     }
-    public void setAge(int age){
+    private void setAge(int age){
         this.age =age;
     }
-    public String getName(){
+    private String getName(){
         return name;
     }
-    public void setName(String name){
+    private void setName(String name){
         this.name=name;
     }
-    public int getWeight(){
+    private int getWeight(){
         return weight;
     }
-    public void setWeight(int weight){
+    private void setWeight(int weight){
         this.weight=weight;
     }
-    public int  getTail(){
+    private int  getTail(){
         return tail;
     }
-    public void setTail(int tail){
+    private void setTail(int tail){
         this.tail=tail;
     }
 
 
-    public String toString() {
+    private String toString() {
     String par = "";
-    par+="Cat name is \" + name";
-    par+="Cat name is \" + name";
-        if(name.isEmpty()){
-            break;
+    par+="Cat name is " + name;
+    par+="age = "+ age;
+    par+="tail = " + tail;
+    par+="weight = " + weight;
+
+    return par;
     }
-        par+=
-    }
+
 }
