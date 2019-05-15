@@ -26,10 +26,11 @@ public class Task_1701 {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<String>allString=new ArrayList<>();
         while(true){
-            allString.add(0,reader.readLine());
+            String s = reader.readLine();
             if(allString.equals("")){
                 break;
             }
+            allString.add(0,s);
         }
         return allString;
     }
