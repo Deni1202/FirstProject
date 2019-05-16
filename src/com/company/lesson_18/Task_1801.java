@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Task_1801 {
     public static void main(String[] args) throws IOException {
-
+System.out.println(findNotDouble(sort(allNumbers())));
     }
     private static int[] allNumbers() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -29,7 +29,7 @@ public class Task_1801 {
         int s = allNumbers[0];
       for(int a = 0; a<allNumbers.length;a++){
           for(int c = 0; c<allNumbers.length-1-a;c++){
-          if(s<=allNumbers[a+1]){
+          if(s<=allNumbers[c+1]){
               s=allNumbers[c];
               allNumbers[c] = allNumbers[c+1];
               allNumbers[c+1] = s;
@@ -38,6 +38,10 @@ public class Task_1801 {
       }
       return allNumbers;
     }
-    privat
+    private static int findNotDouble(int[]allNumbers){
+
+            }
+
+    }
 
 }
