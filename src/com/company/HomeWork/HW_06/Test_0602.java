@@ -10,12 +10,22 @@ package com.company.HomeWork.HW_06;
 Имя: papa Fedya, пол: мужской, возраст: 40, дети: son Lesha, son Misha, daughter Masha
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Test_0602 {
-    public static void main(String[] args){
-        String name =
-        Human grandfather1 = new Human()
+    public static void main(String[] args) throws IOException {
+
+        Human grandfather = new Human("ded Makar",true,60,);
+        Human grandfather2 = new Human("ded Misha",true,65,);
+
+        Human grandmother = new Human("baba Luda",false,60,);
+        Human grandmother2 = new Human("baba Olya",false,62,);
+
+        Human father = new Human("papa Oleksandr",true,38,);
+        Human mother = new Human("mama Olya",true,35,);
 
     }
 }
