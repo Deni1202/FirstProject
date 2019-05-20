@@ -9,7 +9,6 @@ public class Task_1806 {
         Date dateNow = new Date();
         dateNow.setMinutes(0);
         dateNow.setHours(0);
-        dateNow.setDate(1);
         Date dayBegin = new Date();
         long time = dayBegin.getTime() - dateNow.getTime();
         long timeInAll = 60*60*1000;
