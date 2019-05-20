@@ -1,5 +1,5 @@
 package com.company.lesson_18;
-
+/*
 // Задача по алгоритмам.
 // Есть массив чисел, в котором все числа дублируются, кроме одного. Найдите число, которое не имеет дубликатов в массиве.
 // Пример ввода:
@@ -7,7 +7,7 @@ package com.company.lesson_18;
 //  542627588, 1000000000, 444088605, 65475264, 746254373, 542627588, 444088605}
 // Пример вывода:
 // 123456789
-
+*//*
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -19,7 +19,7 @@ System.out.println(findNotDouble(sort(allNumbers())));
     }
     private static int[] allNumbers() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] allNumbers = new int[10];
+        int[] allNumbers = new int[9];
         for(int i = 0; i<allNumbers.length;i++){
             allNumbers[i] = Integer.parseInt(reader.readLine());
         }
@@ -38,10 +38,11 @@ System.out.println(findNotDouble(sort(allNumbers())));
       }
       return allNumbers;
     }
-    private static int findNotDouble(int[]allNumbers){
+      private static int findNotDouble(int[]allNumbers) {
+          int notDouble = 0;
+          for (int b = 0; b < allNumbers.length - 1; b++) {
 
-            }
-
-    }
-
+          }
+      }
 }
+*/
