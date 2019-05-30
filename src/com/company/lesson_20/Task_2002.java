@@ -11,18 +11,18 @@ import java.util.Iterator;
 import java.util.Map;
 
 public class Task_2002 {
-    public static void maine(String[] args){
+    public static void main(String[] args){
     Map<String,String> names = new HashMap<>();
     names.put("first", "I am");
     names.put("second", "I will");
     names.put("third", "I was");
-        printKeys();
+        printKeys(names);
     }
-    public static void printKeys(Map<String,String>names){
-        Iterator<Map.Entry<String,String>>allNames = map.entrySet().iterator();
+    private static void printKeys(Map<String,String>names){
+        Iterator<Map.Entry<String,String>>allNames = names.entrySet().iterator();
         while(allNames.hasNext()){
             Map.Entry<String,String> text = allNames.next();
-            System.out.println(text.getKey() + " " + text.getValue());
+            System.out.println(text.getKey());
         }
     }
 }
