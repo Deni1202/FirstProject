@@ -1,5 +1,4 @@
 package com.company.HomeWork.HW_06;
-
 /*
 1. Создай класс Human с полями имя (String), пол (boolean), возраст (int), дети (ArrayList<Human>).
 2. Создай объекты и заполни их так, чтобы получилось: два дедушки, две бабушки, отец, мать, трое детей.
@@ -66,5 +65,4 @@ class Human{
         this.children = children;
     }
 }
-
 */

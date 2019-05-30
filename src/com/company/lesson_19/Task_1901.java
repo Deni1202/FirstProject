@@ -19,24 +19,21 @@ public class Task_1901 {
      getTime();
     }
     private static long getTime() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Date dateBegin = new Date();
-        int c = Integer.parseInt(reader.readLine());
-        if(c=0){
-        List list = new LinkedList();
+        List list1 = new LinkedList();
         for(int i = 0; i<10000;i++) {
-            list.add(5000, i);
+            list1.add(5000, i);
         }
-            if (c == 1) {
-                List list = new ArrayList();
+
+                List list2 = new ArrayList();
                 for(int i = 0; i<10000;i++) {
-                    list.add(5000, i);
-                }
+                    list2.add(5000, i);
+
             }
-        }
         Date dateInTheEnd = new Date();
         long time = dateInTheEnd.getTime() - dateBegin.getTime();
         return time;
+        }
+
     }
 
-}

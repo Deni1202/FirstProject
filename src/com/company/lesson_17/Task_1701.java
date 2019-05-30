@@ -27,28 +27,20 @@ public class Task_1701 {
         List<String>allString=new ArrayList<>();
         while(true){
             String s = reader.readLine();
-            if(allString.equals("")){
+            if(s.equals("")){
                 break;
             }
-            allString.add(0,s);
+            allString.add(s);
         }
         return allString;
     }
     private static void stringOut(List<String>allString){
-        int b = 0;
         for(int i = 0; i<allString.size();i++) {
             if (allString.size() % 2 == 0) {
-                if(b<=1){
-              System.out.println(allString.get(i));
-              b++;
-              }
+              System.out.println(allString.get(i) + " " + allString.get(i));
+
             } if (allString.size() % 2 != 0) {
-                for(int a = 0;a<=2;a++){
-                    if(b<=2){
-                        System.out.println(allString.get(i));
-                        b++;
-                    }
-                }
+                System.out.println(allString.get(i) + " " + allString.get(i) + " " + allString.get(i));
 
             }
         }
