@@ -17,12 +17,20 @@ public class Task_2002 {
     names.put("second", "I will");
     names.put("third", "I was");
         printKeys(names);
+        printValue(names);
     }
     private static void printKeys(Map<String,String>names){
         Iterator<Map.Entry<String,String>>allNames = names.entrySet().iterator();
         while(allNames.hasNext()){
             Map.Entry<String,String> text = allNames.next();
             System.out.println(text.getKey());
+        }
+    }
+    private static void printValue (Map<String,String> names){
+        Iterator<Map.Entry<String,String>> allValue = names.entrySet().iterator();
+        while(allValue.hasNext()){
+            Map.Entry<String,String> text = allValue.next();
+            System.out.println(text.getValue());
         }
     }
 }
