@@ -18,8 +18,9 @@ public class Task_2003 {
         Set<Integer> allNumbers = new HashSet<>();
         for (int i = 0; i< 5; i++) {
             allNumbers.add(Integer.parseInt(reader.readLine()));
-            System.out.println(removeAllNumbersMoreThan10(allNumbers));
+
         }
+        System.out.println(removeAllNumbersMoreThan10(allNumbers));
     }
     private static Set<Integer> removeAllNumbersMoreThan10(Set<Integer> allNumbers) {
         Iterator<Integer> nums = allNumbers.iterator();
