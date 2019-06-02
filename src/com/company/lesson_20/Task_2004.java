@@ -23,18 +23,49 @@ import java.util.Map;
 
 public class Task_2004 {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedReader reader2 = new BufferedReader(new InputStreamReader(System.in));
-        Map<String,String> nameAndName = new HashMap<>();
-        for(int i =0 i<5;i++){
-            nameAndName.put(reader.readLine(), reader2.readLine());
+        System.out.println(findFirstName(mapInitialisation(),"Simn"));
+        System.out.println(findLastNameRepeet(mapInitialisation(),"Simn"));
         }
-        Iterator<Map.Entry<String,String>>allNames = nameAndName.entrySet().iterator();
-        while(allNames.hasNext()){
-            Map.Entry<String,String> nameRepeet = allNames.next();
-            int count = 0;
-            for(int i = 0; i<5;i++){
-            if(nameRepeet.getValue().equals())
+        private static Map<String,String> mapInitialisation(){
+            Map<String,String> nameAndName = new HashMap<String,String>();
+            nameAndName.put("Sim1", "Simn");
+            nameAndName.put("Simn", "Tomn");
+            nameAndName.put("Simn", "Arbusn");
+            nameAndName.put("Baby", "Simn");
+            nameAndName.put("Art", "Simn");
+            nameAndName.put("Sim", "Dogn");
+            nameAndName.put("Eat", "Eatn");
+            nameAndName.put("Food", "Foodn");
+            nameAndName.put("Gevey", "Geveyn");
+            nameAndName.put("Hugs", "Hugsn");
+            return nameAndName;
         }
+
+            private static int findFirstName(Map<String,String>allNames,String firstName){
+                int count = 0;
+                Iterator<Map.Entry<String,String>>Names = allNames.entrySet().iterator();
+
+        while(Names.hasNext()){
+            Map.Entry<String,String> nameRepeet = Names.next();
+            String key = nameRepeet.getKey();
+                if (firstName.equals(key)) {
+                    count++;
+
+                }
+            }
+        return count;
+
+    }
+    private static int findLastNameRepeet(Map<String,String>allName, String lastName){
+        Iterator<Map.Entry<String,String>>LastName = allName.entrySet().iterator();
+        int count2 = 0;
+        while(LastName.hasNext()){
+            Map.Entry<String,String>lastNameRepeet = LastName.next();
+            String value = lastNameRepeet.getValue();
+            if(lastName.equals(value)){
+                count2++;
+            }
+        }
+        return count2;
     }
 }
