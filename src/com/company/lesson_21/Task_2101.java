@@ -34,17 +34,19 @@ public class Task_2101 {
         userAndDate.put("Stallone8", new Date("DECEMBER 1 1980"));
         userAndDate.put("Stallone9", new Date("MARCH 1 1980"));
 
+        System.out.println(allUser(userAndDate.);
+
     }
     private static Map<String, Date> allUser(Map<String,Date>userAndDate) {
-        Date
         Iterator<Map.Entry<String, Date>> user = userAndDate.entrySet().iterator();
         while (user.hasNext()) {
             Map.Entry<String, Date> user2 = user.next();
             Date date = user2.getValue();
             int month = date.getMonth();
-            if(month == 5 && month == 6 && month == 7){
+            if(month>=5 && month<=7){
                 user.remove();
             }
         }
+        return userAndDate;
     }
 }
