@@ -26,7 +26,7 @@ import java.util.Map;
 public class Task_2102 {
     public static void main(String[] args) throws IOException {
 
-        HashMap<String,String> allPeople = new HashMap<>();
+        HashMap<String, String> allPeople = new HashMap<>();
         allPeople.put("Rooney", "Leo");
         allPeople.put("Lloris", "Hugo");
         allPeople.put("Messi", "Leo");
@@ -37,19 +37,19 @@ public class Task_2102 {
         allPeople.put("Balotelli", "Mario");
         allPeople.put("Gotze", "Mario");
         allPeople.put("Gomez", "Mario");
-        userRemove(allPeople);
+        System.out.println(userRemove(allPeople));
     }
-    private static void userRemove(Map<String,String>allPeople) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String name = reader.readLine();
-        Iterator<Map.Entry<String,String>> user = allPeople.entrySet().iterator();
-        while(user.hasNext()){
-            Map.Entry<String,String> user2 = user.next();
-            if(user2.getValue().equals(name)){
+
+    private static Map<String,String> userRemove(Map<String, String> allPeople) throws IOException {
+        Iterator<Map.Entry<String, String>> user = allPeople.entrySet().iterator();
+        while (user.hasNext()) {
+            Map.Entry<String, String> user2 = user.next();
+            if (user2.getValue().equals("Leo")) {
                 user.remove();
-                System.out.println(user2.getKey() + " - " + user2.getValue());
             }
 
         }
+        return allPeople;
+        }
+
     }
-}
