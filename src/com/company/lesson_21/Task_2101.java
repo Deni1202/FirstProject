@@ -34,7 +34,7 @@ public class Task_2101 {
         userAndDate.put("Stallone8", new Date("DECEMBER 1 1980"));
         userAndDate.put("Stallone9", new Date("MARCH 1 1980"));
 
-        System.out.println(allUser(userAndDate.);
+        System.out.println(allUser(userAndDate));
 
     }
     private static Map<String, Date> allUser(Map<String,Date>userAndDate) {
