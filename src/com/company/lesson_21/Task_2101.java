@@ -40,7 +40,11 @@ public class Task_2101 {
         Iterator<Map.Entry<String, Date>> user = userAndDate.entrySet().iterator();
         while (user.hasNext()) {
             Map.Entry<String, Date> user2 = user.next();
-            Date month = user2.getValue();
+            Date date = user2.getValue();
+            int month = date.getMonth();
+            if(month == 5 && month == 6 && month == 7){
+                user.remove();
+            }
         }
     }
 }
