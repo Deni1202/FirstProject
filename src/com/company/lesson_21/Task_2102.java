@@ -44,12 +44,13 @@ public class Task_2102 {
         Iterator<Map.Entry<String, String>> user = allPeople.entrySet().iterator();
         while (user.hasNext()) {
             Map.Entry<String, String> user2 = user.next();
-            if (user2.getValue().equals("Leo")) {
+
+            if (user2.getValue().equals(user.next().getValue())) {
                 user.remove();
             }
+        }
 
-        }
         return allPeople;
-        }
+    }
 
     }
