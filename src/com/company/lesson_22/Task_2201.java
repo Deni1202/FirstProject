@@ -15,7 +15,6 @@ public class Task_2201 {
         result(allNumber());
     }
     private static List<Integer>allNumber(){
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         List<Integer> number = new ArrayList<>();
         for(int i = 1; i<=10;i++){
             number.add(i);
