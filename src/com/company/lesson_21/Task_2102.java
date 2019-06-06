@@ -41,15 +41,14 @@ public class Task_2102 {
     }
 
     private static Map<String,String> userRemove(Map<String, String> allPeople) throws IOException {
+        HashMap<String,String>result = new HashMap<>();
         Iterator<Map.Entry<String, String>> user = allPeople.entrySet().iterator();
-        while (user.hasNext()) {
-            Map.Entry<String, String> user2 = user.next();
-
-            if (user2.getValue().equals(user.next().getValue())) {
-                user.remove();
-            }
-        }
-
+            while (user.hasNext()) {
+                    Map.Entry<String, String> user2 = user.next();
+                    if (user2.getValue().equals(user.next().getValue())) {
+                        user.remove();
+                    }
+                }
         return allPeople;
     }
 
