@@ -7,8 +7,8 @@ package com.company.lesson_22;
 import java.util.ArrayList;
 import java.util.List;
 
-public class lesson_2202 {
-    public static void main(String[]args) {
+/*public class lesson_2202 {
+   public static void main(String[]args) {
         for (int i = 0; i < 10; i++) {
             System.out.println(fibonachiNum(i));
         }
@@ -19,9 +19,10 @@ public class lesson_2202 {
         if(result == 0){
             return allNumber;
         }
-        result = n+(n-1);
+        result = fibonachiNum(n)+ fibonachiNum(n-1);
         allNumber.add(result);
         return allNumber;
     }
 
 }
+*/
