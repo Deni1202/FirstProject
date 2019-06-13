@@ -8,14 +8,14 @@ NullPointerException, ArithmeticException, FileNotFoundException, URISyntaxExcep
 ArithmeticException и URISyntaxException.
 */
 
-import java.io.FileNotFoundException;
-import java.net.URISyntaxException;
+
 
 public class Task_2306 {
     public static void main(String[] args){
 
     }
     public static void throwsException(){
+
 
     }
 }
