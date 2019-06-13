@@ -15,7 +15,7 @@ public class Task_2401 {
     public static void main(String[] args) {
         try {
             throwsException();
-        } catch (Exception1) {
+        } catch (Exception1 e) {
             System.out.println("Exception");
         }
     }
