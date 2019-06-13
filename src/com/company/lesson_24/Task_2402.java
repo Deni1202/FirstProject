@@ -16,21 +16,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Task_2402 {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         readData();
     }
+
     private static void readData() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
         List<Integer> numb = new ArrayList<>();
-        try{
-            if(numb.equals(s)){
-        }catch(Exception e){
-            for(int i =0; i<numb.size();i++){
-            System.out.println(numb.get(i));
+            try {
+                while(true) {
+                    numb.add(Integer.parseInt(reader.readLine()));
+                }
+            } catch (Exception e) {
+                for (int i = 0; i < numb.size(); i++) {
+                    System.out.println(numb.get(i));
+                }
+
+
+            }
         }
-        numb.add(Integer.parseInt(reader.readLine()));
-
-
     }
-}
