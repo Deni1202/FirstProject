@@ -22,7 +22,7 @@ public class Task_2601 {
     }
     private static void sort(int[] numb){
         for(int i = 0;i<numb.length;i++){
-            for(int a = 0; a<numb.length-1; a++){
+            for(int a = 0; a<numb.length-1-i; a++){
                 int c = 0;
                 if(numb[a]<numb[a+1]){
                     c = numb[a];
