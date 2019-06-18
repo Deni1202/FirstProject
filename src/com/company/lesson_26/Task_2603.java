@@ -41,13 +41,35 @@ public class Task_2603 {
         return allItem;
 
     }
-    private static void sort(List<String>allItem){
+    private static void sort(String[] array){
+        for (int i = 0; i <; i++) {
+            if(){
+                for (int j = 0; j < ; j++) {
+                    if(){
 
-        for(int i = 0; i<allItem.size();i++){
-            for(int a = i;a<allItem.size()-1;a++){
-                if(allItem.get(a).compareTo(allItem.get(i)>0))
+                        if(){
+
+                        }
+                    }
+                }
+            } else {
+                for (int j = 0; j <; j++) {
+                    if(){
+                        if(){
+
+                        }
+                    }
+                }
             }
         }
+    }
+
+    private static boolean isNumber(String a){
+        return true;
+    }
+
+    private static boolean isGreaterThen(String a, String b){
+        return a.compareTo(b) > 0;
     }
 
 }
