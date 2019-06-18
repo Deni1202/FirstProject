@@ -10,15 +10,15 @@ public class Task_2602 {
     }
     private static String[] allWords() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String[]words = new String[5];
+        String[]words = new String[10];
         for(int i = 0; i<words.length;i++){
             words[i] = reader.readLine();
         }
         return words;
     }
     private static void sort(String[]words){
-        for(int i = 0; i<words.length;i++){
-            for(int a = i+1;a<words.length-1;a++)
+        for(int i = 0; i<words.length-1;i++){
+            for(int a = i;a<words.length-1;a++)
             if(words[a].compareTo(words[i]) >0){
                 String k = words[a];
                 words[a] = words[i];
