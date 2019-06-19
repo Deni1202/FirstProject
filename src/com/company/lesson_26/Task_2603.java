@@ -30,41 +30,58 @@ import java.util.List;
 
 public class Task_2603 {
     public static void main(String[]args) throws IOException {
-        myList();
+        sort(myList());
     }
-    private static List<String> myList() throws IOException {
+    private static String[] myList() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        List<String> allItem = new ArrayList<>();
+        String[] allItem = new String[8];
         for(int i = 0; i<8;i++) {
-            allItem.add(reader.readLine());
+            allItem[i]= reader.readLine();
         }
         return allItem;
 
     }
     private static void sort(String[] array){
-        for (int i = 0; i <; i++) {
-            if(){
-                for (int j = 0; j < ; j++) {
-                    if(){
+        int count = 0;
+        int count2 = 0;
+        for (int i = 0; i <array.length; i++) {
+            if(isNumber(array[i])){
+                count++;
+                for (int j = 0; j < count; j++) {
+                    if(isNumber(array[j])){
 
-                        if(){
+                        if(isGreaterThen(array[i],array[j])){
+                            String res = array[i];
+                            array[i] = array[j];
+                            array[j] = res;
 
                         }
                     }
                 }
             } else {
-                for (int j = 0; j <; j++) {
-                    if(){
-                        if(){
+                count2++;
+                for (int j = 0; j <count2; j++) {
+                    if(isNumber(array[i])){
+                        if(Integer.parseInt(array[i])<Integer.parseInt(array[j])){
+                            String res2 = array[i];
+                            array[j] = array[i];
+                            array[i]= res2;
 
                         }
                     }
                 }
             }
         }
+
     }
 
     private static boolean isNumber(String a){
+    try{
+        int num = Integer.parseInt(a);
+    }catch(NumberFormatException e){
+        return false;
+
+        }
         return true;
     }
 
