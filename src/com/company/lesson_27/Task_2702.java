@@ -11,19 +11,28 @@ import java.io.*;
 public class Task_2702 {
     public static void main(String[]args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String second = reader.readLine();
+        String first = null;
+        InputStream input;
         while(true){
         try {
-            String first = reader.readLine();
-            InputStream input = new FileInputStream(first);
+            first = reader.readLine();
+            input = new FileInputStream(first);
             break;
         }catch(FileNotFoundException f){
             System.out.println("Фаил не существует");
         }
 
         }
+        String second = reader.readLine();
         OutputStream outPut = new FileOutputStream(second);
 
+        int a = 0;
+        while(input.available()>0){
+            int b = input.read();
+            outPut.write(b);
+            a++;
+        }
+        System.out.println(a);
 
     }
 
