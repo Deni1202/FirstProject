@@ -6,7 +6,7 @@ package com.company.lesson_27;
 Вывести содержимое словаря на экран.
 В тестах регистр (большая/маленькая буква) влияет на результат.
 */
-
+/*
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -48,3 +48,4 @@ public class Task_2701 {
 }
 
 
+*/

@@ -11,17 +11,20 @@ import java.io.*;
 public class Task_2702 {
     public static void main(String[]args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String first = reader.readLine();
-        String second = reader.readLine();
 
         while(true){
+            String first = reader.readLine();
+            String second = reader.readLine();
         try {
             InputStream input = new FileInputStream(first);
         }catch(FileNotFoundException f){
             System.out.println("Фаил не существует");
         }
         OutputStream outPut = new FileOutputStream(second);
-
+        break;
         }
+
+
     }
+
 }
