@@ -26,6 +26,25 @@ public class Task_2701 {
     }
     private static void chekRepeet(List<String>words){
         Map<String,Integer> chekWords= new HashMap<>();
-        Iterator<Map.Entry<String,Integer>> allWords =
+        for(int i =0;i<words.size();i++){
+            chekWords.put(words.get(i),0);
+        }
+        Iterator<Map.Entry<String,Integer>> allWords = chekWords.entrySet().iterator();
+        while(allWords.hasNext()){
+
+        }
+
+
+        }
+    private static List<String> chekedWords(List<String>words){
+        int count = 0;
+        for(int i = 0;i<words.size();i++){
+            if(words.get(i).equals(words.get(i+1))){
+              count++;
+            }
+        }
+
     }
 }
+
+
