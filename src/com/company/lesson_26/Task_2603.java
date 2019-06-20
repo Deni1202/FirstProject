@@ -30,7 +30,8 @@ import java.util.List;
 
 public class Task_2603 {
     public static void main(String[]args) throws IOException {
-        sort(myList());
+        String[] arr = myList();
+        sort(arr);
     }
     private static String[] myList() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -45,10 +46,10 @@ public class Task_2603 {
         int count = 0;
         int count2 = 0;
         for (int i = 0; i <array.length; i++) {
-            if(isNumber(array[i])){
+            if(!isNumber(array[i])){
                 count++;
                 for (int j = 0; j < count; j++) {
-                    if(isNumber(array[j])){
+                    if(!isNumber(array[j])){
 
                         if(isGreaterThen(array[i],array[j])){
                             String res = array[i];
@@ -64,14 +65,16 @@ public class Task_2603 {
                     if(isNumber(array[i])){
                         if(Integer.parseInt(array[i])<Integer.parseInt(array[j])){
                             String res2 = array[i];
-                            array[j] = array[i];
-                            array[i]= res2;
+                            array[i] = array[j];
+                            array[j]= res2;
 
                         }
                     }
                 }
             }
+            System.out.println(array[i]);
         }
+
 
     }
 
