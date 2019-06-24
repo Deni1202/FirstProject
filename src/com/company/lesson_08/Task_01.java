@@ -13,7 +13,6 @@ package com.company.lesson_08;
 */
 
 import java.sql.SQLOutput;
-
 public class Task_01 {
     public static void main(String[] args){
         Human grandmother1 = new Human("Olya",false, 50,null,null);

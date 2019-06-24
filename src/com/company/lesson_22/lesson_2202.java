@@ -6,7 +6,7 @@ package com.company.lesson_22;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//TODO: 23.06.2019
 /*public class lesson_2202 {
    public static void main(String[]args) {
         for (int i = 0; i < 10; i++) {
