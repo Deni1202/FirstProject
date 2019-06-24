@@ -8,7 +8,7 @@ NullPointerException, ArithmeticException, FileNotFoundException, URISyntaxExcep
 ArithmeticException и URISyntaxException.
 */
 
-
+//TODO 24.06.2019
 
 public class Task_2306 {
     public static void main(String[] args){
