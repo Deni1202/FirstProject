@@ -36,43 +36,45 @@ public class Task_2102 {
         allPeople.put("Balotelli", "Mario");
         allPeople.put("Gotze", "Mario");
         allPeople.put("Gomez", "Mario");
-        userRemove(allPeople,resultFootballPeople(aha(allPeople)));
+        userRemove(allPeople, resultFootballPeople(aha(allPeople)));
+        System.out.println(resultFootballPeople(aha(allPeople)));
+
     }
 
     private static List<String> aha(Map<String, String> allPeople) {
         List<String> footballPoeple = new ArrayList<>();
-        Map<String, String> result = new HashMap<>();
         Iterator<Map.Entry<String, String>> userRemove = allPeople.entrySet().iterator();
         while (userRemove.hasNext()) {
             Map.Entry<String, String> user = userRemove.next();
-                footballPoeple.add(user.getValue());
-            }
+            footballPoeple.add(user.getValue());
+        }
         return footballPoeple;
     }
 
     private static List<String> resultFootballPeople(List<String> footballPeople) {
-        List<String>result = new ArrayList<>();
-            for (int i = 0; i < footballPeople.size() - 1; i++) {
-                if (footballPeople.get(i).equals(footballPeople.get(i + 1))){
-                   result.add(footballPeople.get(i));
-                }
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < footballPeople.size() - 1; i++) {
+            if (footballPeople.get(i).equals(footballPeople.get(i + 1))) {
+                result.add(footballPeople.get(i));
             }
+        }
         return result;
     }
 
-   private static void userRemove(Map<String, String> allPeople,List<String>result) throws IOException {
-       Map<String, String> result2 = new HashMap<>();
-       Iterator<Map.Entry<String, String>> userRemove = allPeople.entrySet().iterator();
-       for(int i = 0; i<result.size();i++){
-       while (userRemove.hasNext()) {
-               Map.Entry<String, String> user = userRemove.next();
-               if (!user.getValue().equals(result.get(i))) {
-                   result2.put(user.getKey(),user.getValue());
+    private static void userRemove(Map<String, String> allPeople, List<String> result) throws IOException {
+        Map<String, String> result2 = new HashMap<>();
 
-               }
-           }
-       }
+        Iterator<Map.Entry<String, String>> userRemove = allPeople.entrySet().iterator();
+        for (int i = 0; i < result.size(); i++) {
+            while (userRemove.hasNext()) {
+                Map.Entry<String, String> user = userRemove.next();
+                if (!user.getValue().equals(result.get(i))) {
+                    result2.put(user.getKey(), user.getValue());
+                }
+            }
+        }
 
-       System.out.println(result2);
-   }
+        System.out.println(result2);
+    }
+
 }
