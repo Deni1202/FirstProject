@@ -14,35 +14,59 @@ package com.company.lesson_28;
 
 public class Task_2801 {
     public static void main(String[] args) {
-
+    Horse pegas = new Pegas("Жорик",true,false);
+    Horse horse = new Horse("Васька",false,true);
+    horse.fly();
+    pegas.fly();
     }
-    class Horse{
+
+    class Horse {
         private String name;
         private boolean flyable;
         private boolean runnable;
 
-        public Horse(String name, boolean flyable, boolean runnable){
+        public Horse(String name, boolean flyable, boolean runnable) {
             this.name = name;
             this.flyable = flyable;
             this.runnable = runnable;
         }
-        public String getName(){
+
+        public String getName() {
             return name;
         }
-        public void setName(String name){
+
+        public void setName(String name) {
             this.name = name;
         }
-        public boolean getFlyble(){
+
+        public boolean getFlyble() {
             return flyable;
         }
-        public void setFlyable(boolean flyable){
-            this.name = name;
+
+        public void setFlyable(boolean flyable) {
+            this.flyable = flyable;
+        }
+
+        public boolean getRunnable() {
+            return runnable;
+        }
+
+        public void setRunnable(boolean runnable) {
+            this.runnable = runnable;
+        }
+        public void fly(boolean flyable){
+            if(flyable=true){
+                System.out.println("My name is " + this.name + " i can fly =)");
+            }else{
+                System.out.println("My name is " + this.name + " cant fly =(");
+            }
         }
     }
 
-    }
     class Pegas extends Horse{
-        public Horse(String name, boolean flyable, boolean runnable){
-            super(name,flyable,runnable);
+        public Pegas(String name, boolean flyable, boolean runnable) {
+            super(name, flyable, runnable);
+        }
+
     }
 }
