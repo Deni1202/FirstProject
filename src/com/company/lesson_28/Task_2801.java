@@ -14,11 +14,12 @@ package com.company.lesson_28;
 
 public class Task_2801 {
     public static void main(String[] args) {
-    Horse pegas = new Pegas("Жорик",true,false);
-    Horse horse = new Horse("Васька",false,true);
-    horse.fly();
-    pegas.fly();
+        Horse pegas = new Pegas("Жорик", true, false);
+        Horse horse = new Horse("Васька", false, true);
+        horse.fly();
+        pegas.fly();
     }
+}
 
     class Horse {
         private String name;
@@ -39,7 +40,7 @@ public class Task_2801 {
             this.name = name;
         }
 
-        public boolean getFlyble() {
+        public boolean getFlyable() {
             return flyable;
         }
 
@@ -54,11 +55,11 @@ public class Task_2801 {
         public void setRunnable(boolean runnable) {
             this.runnable = runnable;
         }
-        public void fly(boolean flyable){
-            if(flyable=true){
-                System.out.println("My name is " + this.name + " i can fly =)");
+        public void fly(){
+            if(flyable==true){
+                System.out.println("My name is " + this.name + " i can fly =) ");
             }else{
-                System.out.println("My name is " + this.name + " cant fly =(");
+                System.out.println("My name is " + this.name + " i cant fly =( ");
             }
         }
     }
@@ -69,4 +70,3 @@ public class Task_2801 {
         }
 
     }
-}
