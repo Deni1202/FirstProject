@@ -56,7 +56,7 @@ public class Task_2801 {
             this.runnable = runnable;
         }
         public void fly(){
-            if(flyable==true){
+            if(flyable){
                 System.out.println("My name is " + this.name + " i can fly =) ");
             }else{
                 System.out.println("My name is " + this.name + " i cant fly =( ");
