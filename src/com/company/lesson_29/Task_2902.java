@@ -16,7 +16,7 @@ public class Task_2902 {
             System.out.println("Кот");
         }else if(name instanceof Fonaric){
         System.out.println("Лампа");
-    }else if(name instanceof Dog){
+    }else if(name instanceof Dog2){
         System.out.println("Собака");
     }
     }
@@ -30,6 +30,6 @@ class Cat3{
 class Fonaric{
 
 }
-class Dog{
+class Dog2{
 
 }
