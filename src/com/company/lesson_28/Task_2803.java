@@ -11,8 +11,9 @@ package com.company.lesson_28;
 public class Task_2803 {
     public static void main(String[]args){
         Cat1 cat = new Cat1("Мурзик",5);
-        Cat1 dog = new Dog("Лорд",4);
-        System.out.println(cat.isDogNear());
+        Dog dog = new Dog("Лорд",4);
+        System.out.println("Мурзик бысрее чем Лорд: " + cat.isDogNear());
+        System.out.println("Лорд бысрее чем Мурзик: " + dog.isCatNear());
     }
 }
 class Cat1{
@@ -37,11 +38,11 @@ class Cat1{
         this.speed = speed;
     }
     public Cat1 getCat(){
-        Cat1 cat = new Cat1("Мурзик",5);
+        Cat1 cat = new Cat1("Мурзик",4);
         return cat;
     }
     public Dog getDog(){
-        Dog dog = new Dog("Лорд",4);
+        Dog dog = new Dog("Лорд",5);
         return dog;
     }
     public boolean isDogNear(){
@@ -53,9 +54,17 @@ class Cat1{
 
     }
 }
-class Dog extends Cat1{
-    public Dog(String name,int speed){
-        super(name,speed);
+class Dog extends Cat1 {
+    public Dog(String name, int speed) {
+        super(name, speed);
+    }
+
+    public boolean isCatNear() {
+        if (getDog().getSpeed() > getCat().getSpeed()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
