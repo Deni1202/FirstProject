@@ -13,7 +13,7 @@ public class Task_2901 {
         Dog dog = new Dog();
         pet.getChildren();
         cat.getChildren();
-        dog.getChildren()
+        dog.getChildren();
     }
 }
 class Pet{
