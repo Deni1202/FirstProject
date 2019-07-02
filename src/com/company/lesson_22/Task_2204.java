@@ -99,10 +99,10 @@ public class Task_2204 {
             return allPets;
         }
 
-    private static void removeCats(Set<Object>allPets) throws IOException {
+    private static void removeCats(Set<Object>allPets,Set<Cat>allCats) throws IOException {
             Iterator<Object> iterator = allPets.iterator();
                 while (iterator.hasNext()) {
-                    if (allPets.equals(createCats())){
+                    if (allPets.equals(allCats)){
                         allPets.remove(iterator);
                     }
                 }

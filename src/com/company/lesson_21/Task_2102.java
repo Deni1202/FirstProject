@@ -42,13 +42,13 @@ public class Task_2102 {
     }
 
     private static List<String> aha(Map<String, String> allPeople) {
-        List<String> footballPoeple = new ArrayList<>();
+        List<String> footballPeople = new ArrayList<>();
         Iterator<Map.Entry<String, String>> userRemove = allPeople.entrySet().iterator();
         while (userRemove.hasNext()) {
             Map.Entry<String, String> user = userRemove.next();
-            footballPoeple.add(user.getValue());
+            footballPeople.add(user.getValue());
         }
-        return footballPoeple;
+        return footballPeople;
     }
 
     private static List<String> resultFootballPeople(List<String> footballPeople) {
