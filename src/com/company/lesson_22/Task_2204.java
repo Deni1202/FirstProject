@@ -23,7 +23,7 @@ public class Task_2204 {
         Set<Cat> cats = createCats();
         Set<Dog> dogs = createDogs();
        //printPets(joinPets(dogs,cats));
-       removeCats(joinPets(dogs,cats));
+       //removeCats(joinPets(dogs,cats));
     }
 
 

@@ -8,19 +8,23 @@ package com.company.lesson_30;
     иначе вывести на экран надпись "Напиток безалкогольный".
 */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Task_3001 {
     public static void main(String[] args) {
         AlcoholicBeer alcogol = new AlcoholicBeer();
-        alcogol.toString();
+        System.out.println(alcogol.toString());
     }
 }
 interface Drink{
-    public boolean isAlcoholic();
+    public boolean isAlcoholic() throws IOException;
 }
 class AlcoholicBeer implements Drink{
     @Override
     public boolean isAlcoholic() {
-       return true;
+        return true;
     }
     public String toString(){
         String res;
@@ -30,5 +34,6 @@ class AlcoholicBeer implements Drink{
             res = "Напиток безалкогольный";
         }
         return res;
+
     }
 }
