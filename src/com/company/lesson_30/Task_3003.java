@@ -16,16 +16,17 @@ public class Task_3003 {
     }
 }
 interface DBObject{
-    public void initializeIdAndName(long id, String name);
+    public Object initializeIdAndName(long id, String name);
 }
 class User implements DBObject{
 
     private long id;
     private String name;
     @Override
-    public void initializeIdAndName(long id, String name) {
+    public User initializeIdAndName(long id, String name) {
         this.id = id;
         this.name = name;
+        return new User();
     }
 
     public long getId() {
@@ -46,13 +47,13 @@ class User implements DBObject{
 
     public String toString(){
         String res;
-       System.out.printf(res ="User has name %s, id = %d");
+       System.out.format(res ="User has name %s, id = %d" + getId(),getName());
        return res;
     }
 
 }
 class Matrix extends User implements DBObject{
-    User user = new User();
-    User user2 = new User();
+    User user = new User(initializeIdAndName(32,"Sasha"));
+    User user2 = new User(initializeIdAndName(23,"Dima"));
 }
 
