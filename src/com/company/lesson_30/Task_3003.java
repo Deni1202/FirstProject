@@ -12,7 +12,6 @@ package com.company.lesson_30;
 public class Task_3003 {
     public static void main(String[] args) {
 
-
     }
 }
 interface DBObject{
@@ -26,7 +25,7 @@ class User implements DBObject{
     public User initializeIdAndName(long id, String name) {
         this.id = id;
         this.name = name;
-        return new User();
+        return this;
     }
 
     public long getId() {
@@ -53,7 +52,8 @@ class User implements DBObject{
 
 }
 class Matrix extends User implements DBObject{
-    User user = new User(initializeIdAndName(32,"Sasha"));
-    User user2 = new User(initializeIdAndName(23,"Dima"));
+    User user = initializeIdAndName(32,"Sasha");
+    User user2 = initializeIdAndName(23,"Dima");
+
 }
 
