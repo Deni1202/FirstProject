@@ -48,13 +48,13 @@ class User implements DBObject{
 
     public String toString(){
         String res;
-       System.out.format(res ="User has name %s, id = %d" + getId(),getName());
+       System.out.format(res ="User has name %s, id = %d" + name,id);
        return res;
     }
 
 }
 class Matrix {
-    static User user = new User().initializeIdAndName(32,"Sasha");
+    static User user = new User().initializeIdAndName(3,"Sasha");
     static User user2 = new User().initializeIdAndName(23,"Dima");
 
 }
