@@ -14,17 +14,16 @@ public class Task_3002 {
     public static void main(String[]args){
         Cola cola = new Cola();
         Beer beer= new Beer();
-        print(cola.isAlcoholic());
-
+        print(cola);
+        print(beer);
     }
-    private static String print(){
-        String res;
-        if(){
-            System.out.println(res = "Напиток алкогольный");
-        }else{
-            System.out.println(res = "Напиток безалкогольный");
+    private static void print(Drink2 n){
+        if (n.isAlcoholic()) {
+            System.out.println("Напиток алкогольный");
+        } else {
+            System.out.println("Напиток безалкогольный");
+
         }
-        return res;
     }
 
 }
