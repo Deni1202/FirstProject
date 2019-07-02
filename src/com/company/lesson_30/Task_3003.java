@@ -11,11 +11,13 @@ package com.company.lesson_30;
 
 public class Task_3003 {
     public static void main(String[] args) {
+        System.out.println(Matrix.user);
+        System.out.println(Matrix.user2);
 
     }
 }
 interface DBObject{
-    public Object initializeIdAndName(long id, String name);
+    public DBObject initializeIdAndName(long id, String name);
 }
 class User implements DBObject{
 
@@ -51,9 +53,9 @@ class User implements DBObject{
     }
 
 }
-class Matrix extends User implements DBObject{
-    User user = initializeIdAndName(32,"Sasha");
-    User user2 = initializeIdAndName(23,"Dima");
+class Matrix {
+    static User user = new User().initializeIdAndName(32,"Sasha");
+    static User user2 = new User().initializeIdAndName(23,"Dima");
 
 }
 
