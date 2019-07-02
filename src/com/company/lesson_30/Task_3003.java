@@ -12,6 +12,7 @@ package com.company.lesson_30;
 public class Task_3003 {
     public static void main(String[] args) {
 
+
     }
 }
 interface DBObject{
@@ -21,7 +22,8 @@ class User implements DBObject{
 
     private long id;
     private String name;
-    public User (long id, String name){
+    @Override
+    public void initializeIdAndName(long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -41,13 +43,16 @@ class User implements DBObject{
     public void setName(String name) {
         this.name = name;
     }
-    @Override
-    public void initializeIdAndName(long id, String name) {
 
-    }
     public String toString(){
-       System.out.printf("User has name %s, id = %d");
+        String res;
+       System.out.printf(res ="User has name %s, id = %d");
+       return res;
     }
 
+}
+class Matrix extends User implements DBObject{
+    User user = new User();
+    User user2 = new User();
 }
 
