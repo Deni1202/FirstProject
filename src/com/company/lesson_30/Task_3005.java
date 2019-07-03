@@ -9,30 +9,41 @@ package com.company.lesson_30;
 6. Переопределить метод toString() в классе Today, что бы он выводил на экран надпись %s for today, где %s - тип погоды
 */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Task_3005 {
-    public static void main(String[]args){
+    public static void main(String[]args) throws IOException {
         Today dayNow = new Today();
-        System.out.println(dayNow.getWeatherType());
+        System.out.format(dayNow.getWeatherType());
     }
 }
 
 interface Weather{
-    String getWeatherType();
+    String getWeatherType() throws IOException;
 }
 interface WeatherType{
     String weatherType = "Sunshine";
-    String weatherType2 = "Rain";
-    String weatherType3 = "Frozen";
-
-
+    String weatherType2 = "It`s Rain";
+    String weatherType3 = "It`s Frozen";
 
 }
 class Today implements Weather{
     private String type;
 
     @Override
-    public String getWeatherType() {
-        String type = WeatherType.weatherType;
+    public String getWeatherType() throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Какая погода за окном?");
+        int ch = Integer.parseInt(reader.readLine());
+        if(ch == 0) {
+            type = WeatherType.weatherType;
+        }if(ch == 1){
+            type = WeatherType.weatherType2;
+        }else{
+            type = WeatherType.weatherType3;
+        }
         return type;
     }
 
@@ -43,9 +54,7 @@ class Today implements Weather{
     public void setType(String type) {
         this.type = type;
     }
-    String toString(String type){
-        String myWeather;
-        System.out.format(myWeather = "%s for today" + type);
-        return myWeather;
+    public String toString(){
+        return "%s for today" + type;
     }
 }
