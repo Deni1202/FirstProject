@@ -16,7 +16,7 @@ import java.io.InputStreamReader;
 public class Task_3005 {
     public static void main(String[]args) throws IOException {
         Today dayNow = new Today();
-        System.out.format(dayNow.getWeatherType());
+        System.out.format(dayNow.getWeatherType(),dayNow.toString());
     }
 }
 
@@ -55,6 +55,8 @@ class Today implements Weather{
         this.type = type;
     }
     public String toString(){
-        return "%s for today" + type;
+        String s;
+        System.out.format(s ="%s for today.", type);
+        return s;
     }
 }
