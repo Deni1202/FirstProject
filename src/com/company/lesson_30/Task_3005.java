@@ -60,7 +60,7 @@ class Today implements Weather{
     }
     public String toString(){
         String s="";
-        System.out.format(s ="%s for today.", getWeatherType());
+        System.out.format(s ="%s for today.", type);
         return s;
     }
 }
