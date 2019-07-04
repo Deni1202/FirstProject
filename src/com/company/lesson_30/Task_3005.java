@@ -32,6 +32,10 @@ interface WeatherType{
 class Today implements Weather{
     private String type;
 
+    public Today(String type){
+        this.type = type;
+    }
+
     @Override
     public String getWeatherType() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -55,8 +59,8 @@ class Today implements Weather{
         this.type = type;
     }
     public String toString(){
-        String s;
-        System.out.format(s ="%s for today.", type);
+        String s="";
+        System.out.format(s ="%s for today.", getWeatherType());
         return s;
     }
 }
