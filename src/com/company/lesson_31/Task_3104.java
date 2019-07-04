@@ -30,6 +30,7 @@ public class Task_3104 {
         plot.add(new Person("Бабка", "Бабку"));
         plot.add(new Person("Внучка", "Внучку"));
         RepkaStory.tell(plot);
+
     }
 }
 class Person implements RepkaItem{
@@ -60,10 +61,10 @@ class Person implements RepkaItem{
         System.out.println(getName() + " за " + getNamePadezh());
     }
 }
-class RepkaStory{
-    public void tell(List<Person>allPerson){
-        for(int i = 0;i<allPerson.size();i++){
-            System.out.println(allPerson.get(i));
+class RepkaStory {
+    public static void tell(List<Person>allPerson){
+        for(int i = 0;i<allPerson.size()+1;i++){
+           System.out.println(allPerson.get(i).getName() + allPerson.get(i+1).getNamePadezh());
         }
     }
 
