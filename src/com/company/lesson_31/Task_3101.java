@@ -11,18 +11,15 @@ import java.io.*;
 
 public class Task_3101 {
     public static void main(String[] args) throws IOException {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-    String s1 = reader.readLine();
-    String s2 = reader.readLine();
+        String s1 = reader.readLine();
 
-    InputStream input = new FileInputStream(s1);
-    OutputStream outPut = new FileOutputStream(s2);
+        InputStream input = new FileInputStream(s1);
 
-    if(input.available()>0){
-        int res = input.read();
-        outPut.write(res);
-
+            while(input.available() > 0) {
+                int res = (char)input.read();
+                System.out.println(res);
+            }
+        }
     }
-    }
-}
