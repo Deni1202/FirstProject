@@ -58,14 +58,15 @@ class Person implements RepkaItem{
     public void setNamePadezh(String namePadezh) {
         this.namePadezh = namePadezh;
     }
-    public void pull(Person person){
-        person.getName().
+    public String pull(Person person){
+        String strory = getName() + " за " + person.getNamePadezh();
+        return strory;
     }
 }
 class RepkaStory {
     public static void tell(List<Person>allPerson){
-        for(int i = 0;i<allPerson.size();i++){
-           System.out.println(allPerson.get(i).getName() + " за " + allPerson.get(i).getNamePadezh());
+        for(int i = 0;i<allPerson.size()-1;i++){
+           System.out.println(allPerson.get(i));
         }
 
     }
