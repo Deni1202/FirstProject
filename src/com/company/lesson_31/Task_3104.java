@@ -65,8 +65,8 @@ class Person implements RepkaItem{
 }
 class RepkaStory {
     public static void tell(List<Person>allPerson){
-        for(int i = 0;i<allPerson.size()-1;i++){
-           System.out.println(allPerson.get(i+1).pull(allPerson.get(i)));
+        for(int i = allPerson.size()-1;i>0;i--){
+           System.out.println(allPerson.get(i).pull(allPerson.get(i-1)));
         }
 
     }
