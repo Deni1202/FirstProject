@@ -59,7 +59,7 @@ class Person implements RepkaItem{
         this.namePadezh = namePadezh;
     }
     public void pull(Person person){
-        System.out.println(getName() + " за " + getNamePadezh());
+        person.getName().
     }
 }
 class RepkaStory {
