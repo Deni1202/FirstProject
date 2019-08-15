@@ -7,7 +7,7 @@ package com.company.lesson_33;
 1.3. Добавить в класс метод String getDescription(), который возвращает строку "Я курица."
 
 2. Создать класс RussianHen, который наследуется от Hen
-3. Создать класс UkrainianHen, который наследуется от Hen
+3. Создать класс UkrainiannHe, который наследуется от Hen
 4. Создать класс MoldovanHen, который наследуется от Hen
 5. Создать класс BelarusianHen, который наследуется от Hen
 
@@ -28,6 +28,16 @@ package com.company.lesson_33;
 
 public class Task_3301 {
     public static void main(String[] args) {
+        RussianHen hen = new RussianHen("Россия",10);
+        BelarusianHen hen1 = new BelarusianHen("Беларусь",15);
+        MoldovanHen hen2 = new MoldovanHen("Молдова",20);
+        UkrainiannHen hen3 = new UkrainiannHen("Украина",25);
+    }
+    class HenFactory{
+        public String  getHen(String country){
+
+        }
+
     }
 }
 abstract class Hen{
@@ -38,10 +48,12 @@ abstract class Hen{
 
 }
 class RussianHen extends Hen{
-    String country = "Russian";
+    private String country;
+    private int egg;
 
-    public RussianHen(String country){
+    public RussianHen(String country, int egg){
         this.country = country;
+        this.egg = egg;
     }
     public String getCountry() {
         return country;
@@ -50,23 +62,97 @@ class RussianHen extends Hen{
     public void setCountry(String country) {
         this.country = country;
     }
+    public int getEgg() {
+        return egg;
+    }
+
+    public void setEgg(int egg) {
+        this.egg = egg;
+    }
     int getCountOfEggsPerMonth() {
-        return 10;
+        return egg;
     }
     String getDescription() {
         return;
     }
 }
 class MoldovanHen extends Hen{
-    String country = "Moldovia";
-    int getCountOfEggsPerMonth() {
-        return 12;
+    private String country;
+    private int egg;
+
+    public MoldovanHen(String country, int egg){
+        this.country = country;
+        this.egg = egg;
     }
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+    public int getEgg() {
+        return egg;
+    }
+
+    public void setEgg(int egg) {
+        this.egg = egg;
+    }
+    int getCountOfEggsPerMonth() {
+        return egg;
+    }
+
 }
 class BelarusianHen extends Hen{
-    String country = "Belaruss";
+    private String country;
+    private int egg;
+
+    public BelarusianHen(String country, int egg){
+        this.country = country;
+        this.egg = egg;
+    }
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+    public int getEgg() {
+        return egg;
+    }
+
+    public void setEgg(int egg) {
+        this.egg = egg;
+    }
     int getCountOfEggsPerMonth() {
         return 15;
+    }
+}
+class UkrainiannHen extends  Hen{
+    private String country;
+    private int egg;
+
+    public UkrainiannHen(String country, int egg){
+        this.country = country;
+        this.egg = egg;
+    }
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+    public int getEgg() {
+        return egg;
+    }
+
+    public void setEgg(int egg) {
+        this.egg = egg;
+    }
+    int getCountOfEggsPerMonth() {
+        return 20;
     }
 }
 
