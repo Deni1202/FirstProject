@@ -38,9 +38,6 @@ public class Task_3301 {
 
         }
     }
-    interface Country{
-
-    }
 }
 abstract class Hen{
     private String country;
@@ -98,7 +95,7 @@ class RussianHen extends Hen{
 
     @Override
     String getDescription() {
-        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
+        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getCountOfEggsPerMonth() + " в месяц.";
     }
 }
 class MoldovanHen extends Hen{
@@ -129,7 +126,7 @@ class MoldovanHen extends Hen{
 
     @Override
     String getDescription() {
-        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
+        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getCountOfEggsPerMonth() + " в месяц.";
     }
 
 }
@@ -161,7 +158,7 @@ class BelarusianHen extends Hen{
 
     @Override
     String getDescription() {
-       return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
+       return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getCountOfEggsPerMonth() + " в месяц.";
     }
 }
 class UkrainiannHen extends  Hen{
@@ -192,7 +189,7 @@ class UkrainiannHen extends  Hen{
 
     @Override
     String getDescription() {
-        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
+        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getCountOfEggsPerMonth() + " в месяц.";
     }
 }
 
