@@ -74,8 +74,7 @@ class RussianHen extends Hen{
     private int egg;
 
     public RussianHen(String country, int egg){
-        this.country = country;
-        this.egg = egg;
+        super(country,egg);
     }
     public String getCountry() {
         return country;
@@ -103,8 +102,8 @@ class MoldovanHen extends Hen{
     private int egg;
 
     public MoldovanHen(String country, int egg){
-        this.country = country;
-        this.egg = egg;
+        super(country,egg);
+
     }
     public String getCountry() {
         return country;
@@ -130,8 +129,8 @@ class BelarusianHen extends Hen{
     private int egg;
 
     public BelarusianHen(String country, int egg){
-        this.country = country;
-        this.egg = egg;
+        super(country,egg);
+
     }
     public String getCountry() {
         return country;
@@ -156,8 +155,8 @@ class UkrainiannHen extends  Hen{
     private int egg;
 
     public UkrainiannHen(String country, int egg){
-        this.country = country;
-        this.egg = egg;
+        super(country,egg);
+
     }
     public String getCountry() {
         return country;
