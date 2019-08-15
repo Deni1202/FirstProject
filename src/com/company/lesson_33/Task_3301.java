@@ -37,6 +37,8 @@ public class Task_3301 {
         public String  getHen(String country){
 
         }
+    }
+    interface Country{
 
     }
 }
