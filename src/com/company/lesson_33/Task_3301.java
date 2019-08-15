@@ -93,8 +93,10 @@ class RussianHen extends Hen{
     int getCountOfEggsPerMonth() {
         return egg;
     }
+
+    @Override
     String getDescription() {
-        return;
+        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
     }
 }
 class MoldovanHen extends Hen{
@@ -123,6 +125,11 @@ class MoldovanHen extends Hen{
         return egg;
     }
 
+    @Override
+    String getDescription() {
+        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
+    }
+
 }
 class BelarusianHen extends Hen{
     private String country;
@@ -147,7 +154,12 @@ class BelarusianHen extends Hen{
         this.egg = egg;
     }
     int getCountOfEggsPerMonth() {
-        return 15;
+        return egg;
+    }
+
+    @Override
+    String getDescription() {
+       return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
     }
 }
 class UkrainiannHen extends  Hen{
@@ -173,7 +185,12 @@ class UkrainiannHen extends  Hen{
         this.egg = egg;
     }
     int getCountOfEggsPerMonth() {
-        return 20;
+        return egg;
+    }
+
+    @Override
+    String getDescription() {
+        return super.getDescription() + " Моя страна " + getCountry() + ". Я несу " + getEgg() + " в месяц.";
     }
 }
 
