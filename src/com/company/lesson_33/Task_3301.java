@@ -28,10 +28,10 @@ package com.company.lesson_33;
 
 public class Task_3301 {
     public static void main(String[] args) {
-        RussianHen hen = new RussianHen("Россия",10);
-        BelarusianHen hen1 = new BelarusianHen("Беларусь",15);
-        MoldovanHen hen2 = new MoldovanHen("Молдова",20);
-        UkrainiannHen hen3 = new UkrainiannHen("Украина",25);
+        Hen hen = new RussianHen("Россия",10);
+        Hen hen1 = new BelarusianHen("Беларусь",15);
+        Hen hen2 = new MoldovanHen("Молдова",20);
+        Hen hen3 = new UkrainiannHen("Украина",25);
     }
     class HenFactory{
         public String  getHen(String country){
