@@ -41,6 +41,28 @@ public class Task_3301 {
     }
 }
 abstract class Hen{
+    private String country;
+    private int egg;
+
+    public Hen(String country, int egg){
+        this.country = country;
+        this.egg = egg;
+    }
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public int getEgg() {
+        return egg;
+    }
+
+    public void setEgg(int egg) {
+        this.egg = egg;
+    }
     abstract int getCountOfEggsPerMonth();
     String getDescription(){
         return "Я курица";
