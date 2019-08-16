@@ -28,10 +28,32 @@ package com.company.lesson_33;
 
 public class Task_3301 {
     public static void main(String[] args) {
-        Hen hen = new RussianHen("Россия",10);
+        for (WhatIsACountry country:WhatIsACountry.values()) {
+            switch (country){
+                case RUSSIAN:
+                    System.out.println("Россия");
+                    break;
+                case UKRAINE:
+                    System.out.println("Украина");
+                    break;
+                case MOLDOVIAN:
+                    System.out.println("Молдова");
+                    break;
+                case BELARUSIAN:
+                    System.out.println("Беларусь");
+                    break;
+            }
+        }
+        Hen hen = new RussianHen(,10);
         Hen hen1 = new BelarusianHen("Беларусь",15);
         Hen hen2 = new MoldovanHen("Молдова",20);
         Hen hen3 = new UkrainiannHen("Украина",25);
+    }
+    enum WhatIsACountry{
+        RUSSIAN,
+        UKRAINE,
+        BELARUSIAN,
+        MOLDOVIAN;
     }
     class HenFactory{
         public String  getHen(String country){
